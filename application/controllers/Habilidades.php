@@ -1,0 +1,17 @@
+<?php
+
+class Habilidades extends CI_Controller {
+
+    function __construct()
+    {
+        parent::__construct();
+    
+    }
+
+	public function index()
+	{
+		$this->load->view('header');
+		$this->load->view('habilidades');
+		$this->load->view('footer');
+	}
+}
