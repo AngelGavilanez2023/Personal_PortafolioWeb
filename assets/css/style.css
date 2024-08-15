@@ -781,22 +781,23 @@ a:hover {
   padding: 12px 24px;
   font-size: 16px;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 2px solid #fff; 
+  background-color: #007bff; /* Color sólido azul */
+  border: 2px solid #007bff; /* Borde del mismo color que el fondo */
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .btn-download:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-  color: #ffffff; 
+  background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+  border-color: #0056b3; /* Borde más oscuro */
+  color: #fff; /* Mantiene el texto blanco */
 }
 
-
 .btn-download:active {
-  background-color: rgba(255, 255, 255, 0.5); 
-  color: #000; /* fin mis estilos */
+  background-color: #004085; /* Color aún más oscuro al hacer clic */
+  border-color: #004085; /* Borde aún más oscuro */
+  color: #fff; /* Mantiene el texto blanco */
 }
 
 
