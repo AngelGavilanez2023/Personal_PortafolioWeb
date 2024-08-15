@@ -781,9 +781,9 @@ a:hover {
   padding: 12px 24px;
   font-size: 16px;
   color: #fff;
-  background-color: #007bff; /* Color sólido azul */
-  border: 2px solid #007bff; /* Borde del mismo color que el fondo */
-  border-radius: 5px;
+  background-color: rgba(165, 167, 169, 0.2); /* Gris medio transparente */
+  border: 2px solid #ffffff; /* Borde del mismo color que el fondo */
+  border-radius: 10px;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
 }
