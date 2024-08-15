@@ -775,6 +775,21 @@ a:hover {
   font-weight: 600;
 }
 
+/* Mis estilos */
+#download-vitae {
+  background-color: #f8f9fa;
+}
+
+#download-vitae .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+#download-vitae .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
 @media (min-width: 768px) {
   .hero .hero-subtitle {
     font-size: 2.5rem;
