@@ -249,14 +249,25 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         // Añadir la clase de animación cuando el elemento entre en la vista
-        entry.target.classList.add('fade-in');
-        entry.target.classList.add('scale-up'); // Añade la animación de escala si es necesario
+        if (entry.target.classList.contains('fade-in') || entry.target.classList.contains('scale-up')) {
+          entry.target.classList.add('fade-in');
+          entry.target.classList.add('scale-up'); // Añade la animación de escala si es necesario
+        }
+
+        // Animar las barras de progreso
+        if (entry.target.classList.contains('progress')) {
+          const bars = entry.target.querySelectorAll('.progress-bar');
+          bars.forEach(bar => {
+            const width = bar.getAttribute('data-progress');
+            bar.style.width = width + '%';
+          });
+        }
+
         observer.unobserve(entry.target); // Deja de observar el elemento después de que se haya animado
       }
     });
   }, observerOptions);
 
   // Observa los elementos deseados
-  document.querySelectorAll('.fade-in, .scale-up').forEach(el => observer.observe(el));
+  document.querySelectorAll('.fade-in, .scale-up, .progress').forEach(el => observer.observe(el));
 });
- //mis estilos fin
