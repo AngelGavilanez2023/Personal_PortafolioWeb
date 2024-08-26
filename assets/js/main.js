@@ -271,3 +271,5 @@ document.addEventListener('DOMContentLoaded', () => {
   // Observa los elementos deseados
   document.querySelectorAll('.fade-in, .scale-up, .progress').forEach(el => observer.observe(el));
 });
+
+
