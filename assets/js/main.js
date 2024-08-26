@@ -234,3 +234,29 @@
   new PureCounter();
 
 })()
+
+//Mis estilos
+document.addEventListener('DOMContentLoaded', () => {
+  // Opciones del IntersectionObserver
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  // Crear un IntersectionObserver
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Añadir la clase de animación cuando el elemento entre en la vista
+        entry.target.classList.add('fade-in');
+        entry.target.classList.add('scale-up'); // Añade la animación de escala si es necesario
+        observer.unobserve(entry.target); // Deja de observar el elemento después de que se haya animado
+      }
+    });
+  }, observerOptions);
+
+  // Observa los elementos deseados
+  document.querySelectorAll('.fade-in, .scale-up').forEach(el => observer.observe(el));
+});
+ //mis estilos fin

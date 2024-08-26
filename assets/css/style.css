@@ -776,6 +776,33 @@ a:hover {
 }
 
 /* Mis estilos */
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Animación de escala */
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.scale-up {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: scaleUp 1s ease-out forwards;
+} /* Mis estilos */
+
+
+
+/* Mis estilos */
 .btn-download {
   display: inline-block;
   padding: 12px 24px;
@@ -797,7 +824,7 @@ a:hover {
 .btn-download:active {
   background-color: #004085; /* Color aún más oscuro al hacer clic */
   border-color: #004085; /* Borde aún más oscuro */
-  color: #fff; /* Mantiene el texto blanco */
+  color: #fff; /* Mis estilos fin*/
 }
 
 
