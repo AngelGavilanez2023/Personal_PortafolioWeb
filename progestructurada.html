@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mostrar/Ocultar Contenido</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f8f9fa;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      width: 300px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .card-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background-color: #e9ecef;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 0 10px;
+    }
+
+    .card.expanded .card-content {
+      max-height: 100px; /* Ajusta según el tamaño del contenido */
+      padding: 10px;
+    }
+
+    .card-header {
+      margin-bottom: 10px;
+    }
+
+    .toggle-button {
+      cursor: pointer;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .toggle-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="card-header">
+      <h4>Título de la Tarjeta</h4>
+      <button class="toggle-button">Mostrar Contenido</button>
+    </div>
+    <div class="card-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var card = document.querySelector('.card');
+      var button = document.querySelector('.toggle-button');
+      var content = document.querySelector('.card-content');
+
+      button.addEventListener('click', function() {
+        if (card.classList.contains('expanded')) {
+          card.classList.remove('expanded');
+          button.textContent = 'Mostrar Contenido';
+        } else {
+          card.classList.add('expanded');
+          button.textContent = 'Ocultar Contenido';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
