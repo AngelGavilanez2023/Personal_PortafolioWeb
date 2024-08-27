@@ -37,6 +37,7 @@ a:hover {
 
 .p-r {
   position: relative;
+  text-align: justify;
 }
 
 .color-a {
@@ -400,6 +401,7 @@ a:hover {
 /*------/ Button /------*/
 .button {
   display: inline-block;
+  width: 200px;
   padding: 0.3rem 0.6rem;
   text-align: center;
   vertical-align: middle;
@@ -407,8 +409,8 @@ a:hover {
   -moz-user-select: none;
   user-select: none;
   font-size: 1rem;
-  border-radius: 0.3rem;
-  border: 1px solid transparent;
+  border-radius: 0.8rem;
+  border: 1px solid black;
   transition: all 500ms ease;
   cursor: pointer;
 }
@@ -418,14 +420,14 @@ a:hover {
 }
 
 .button:hover {
-  background-color: #0062d3;
+  background-color: #dbe4e6;
   color: #fff;
   transition: all 500ms ease;
 }
 
 .button-a {
   text-decoration: none;
-  background-color: #0078ff;
+  background-color: #ffffff;
   color: #fff;
   border-color: #cde1f8;
 }
@@ -436,7 +438,7 @@ a:hover {
 }
 
 .button-rouded {
-  border-radius: 5rem;
+  border-radius: 0.8rem;
 }
 
 .btn-lg {
