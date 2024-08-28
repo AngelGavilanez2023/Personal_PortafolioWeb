@@ -169,10 +169,11 @@
             <div class="col-sm-12">
               <div class="title-box text-center">
                 <h3 class="title-a">
-                  Mi Rutina
+                  Prog. Estructurada
                 </h3>
                 <p class="subtitle-a">
-                  Haz clic en cualquier contenido para evidenciar la práctica de mis Habilidades :)
+                  Cada Ejercicio presenta la solución del mismo mediante código en Java 
+                  <i class="bi bi-cup-hot"></i> 
                 </p>
                 <div class="line-mf"></div>
               </div>
@@ -183,72 +184,20 @@
             <div class="col-md-4">
                   <div class="card">
                     <div class="card-header">
-                      <h6 class="card-title mb-0">Calculadora Básica</h6>
+                      <h6 class="card-title mb-0">Ejercicio 1:</h6>
                       <label class="form-check-label text-muted">
                         <i class="fas fa-toggle-off" id="switch-icon"></i>
                         <span>Código</span>
                       </label>
                     </div>
                     <div class="card-body">
-                      <p class="text-muted" style="text-align: justify">Crear una calculadora básica para operaciones aritméticas como: suma, resta, multiplicación y división.</p>
+                      <p class="text-muted" style="text-align: justify">Crear una calculadora básica para realizar operaciones aritméticas como: suma, resta, multiplicación y división.</p>
                       <div class="code-view">
                         <button class="btn-copy" data-clipboard-target="#code-block-1">
                           <i class="fas fa-copy"></i> Copiar código
                         </button>
                         <pre id="code-block-1">
-import java.util.Scanner;
-
-public class Calculadora {
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("Calculadora Básica");
-        System.out.println("Selecciona una operación:");
-        System.out.println("1. Sumar");
-        System.out.println("2. Restar");
-        System.out.println("3. Multiplicar");
-        System.out.println("4. Dividir");
-
-        int opcion = scanner.nextInt();
-
-        System.out.println("Introduce el primer número:");
-        double num1 = scanner.nextDouble();
-
-        System.out.println("Introduce el segundo número:");
-        double num2 = scanner.nextDouble();
-
-        double resultado;
-
-        switch (opcion) {
-            case 1:
-                resultado = num1 + num2;
-                System.out.println("El resultado de la suma es: " + resultado);
-                break;
-            case 2:
-                resultado = num1 - num2;
-                System.out.println("El resultado de la resta es: " + resultado);
-                break;
-            case 3:
-                resultado = num1 * num2;
-                System.out.println("El resultado de la multiplicación es: " + resultado);
-                break;
-            case 4:
-                if (num2 != 0) {
-                    resultado = num1 / num2;
-                    System.out.println("El resultado de la división es: " + resultado);
-                } else {
-                    System.out.println("Error: División por cero no permitida.");
-                }
-                break;
-            default:
-                System.out.println("Opción inválida.");
-                break;
-        }
-
-        scanner.close();
-    }
-}
+                          <!-- codigo desde archivo .txt -->
                         </pre>
                       </div>
                     </div>
@@ -258,19 +207,19 @@ public class Calculadora {
             <div class="col-md-4">
               <div class="card">
                 <div class="card-header">
-                  <h6 class="card-title mb-0">Calculadora Básica</h6>
+                  <h6 class="card-title mb-0">Ejercicio 2:</h6>
                   <label class="form-check-label text-muted">
                     <i class="fas fa-toggle-off" id="switch-icon"></i>
                     <span>Código</span>
                   </label>
                 </div>
                 <div class="card-body">
-                  <p class="text-muted" style="text-align: justify">Crear una calculadora básica para operaciones aritméticas como: suma, resta, multiplicación y división.</p>
+                  <p class="text-muted" style="text-align: justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde a saepe commodi vitae eius illum, cumque dolore accusamus quam, ipsam aspernatur iste corporis totam qui earum, explicabo praesentium aliquid officiis?.</p>
                   <div class="code-view">
                     <button class="btn-copy" data-clipboard-target="#code-block-1">
                       <i class="fas fa-copy"></i> Copiar código
                     </button>
-                    <pre id="code-block-1">
+                    <pre id="code-block-2">
 import java.util.Scanner;
 
 public class Calculadora {
@@ -333,19 +282,19 @@ public static void main(String[] args) {
             <div class="col-md-4">
               <div class="card">
                 <div class="card-header">
-                  <h6 class="card-title mb-0">Calculadora Básica</h6>
+                  <h6 class="card-title mb-0">Ejercicio 3:</h6>
                   <label class="form-check-label text-muted">
                     <i class="fas fa-toggle-off" id="switch-icon"></i>
                     <span>Código</span>
                   </label>
                 </div>
                 <div class="card-body">
-                  <p class="text-muted" style="text-align: justify">Crear una calculadora básica para operaciones aritméticas como: suma, resta, multiplicación y división.</p>
+                  <p class="text-muted" style="text-align: justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere quibusdam, veniam impedit odit debitis cum expedita dignissimos, eius atque, rerum itaque hic! Quis voluptatem quos officiis iste, reiciendis delectus. Ullam.</p>
                   <div class="code-view">
                     <button class="btn-copy" data-clipboard-target="#code-block-1">
                       <i class="fas fa-copy"></i> Copiar código
                     </button>
-                    <pre id="code-block-1">
+                    <pre id="code-block-3">
 import java.util.Scanner;
 
 public class Calculadora {
@@ -448,47 +397,73 @@ public static void main(String[] args) {
   <script src="assets/js/main.js"></script>
 
   <script>
+    
     document.addEventListener('DOMContentLoaded', function() {
-      var cards = document.querySelectorAll('.card');
-      
-      cards.forEach(function(card) {
-        var codeView = card.querySelector('.code-view');
-        var switchIcon = card.querySelector('#switch-icon');
+    var cards = document.querySelectorAll('.card');
 
-        card.querySelector('.form-check-label').addEventListener('click', function() {
-          if (codeView.style.display === 'block') {
-            codeView.style.display = 'none';
-            switchIcon.classList.remove('fa-toggle-on');
-            switchIcon.classList.add('fa-toggle-off');
-          } else {
-            codeView.style.display = 'block';
-            switchIcon.classList.remove('fa-toggle-off');
-            switchIcon.classList.add('fa-toggle-on');
-          }
-        });
+    cards.forEach(function(card) {
+      var codeView = card.querySelector('.code-view');
+      var switchIcon = card.querySelector('.form-check-label i');
+      var button = card.querySelector('.btn-copy');
+      var codeBlockId = button.getAttribute('data-clipboard-target');
+
+      // Determina el archivo correcto para cada botón de copia
+      var file = codeBlockId === '#code-block-1' ? 'assets/docs/ejercicio1.txt' :
+                codeBlockId === '#code-block-2' ? 'assets/docs/ejercicio2.txt' :
+                codeBlockId === '#code-block-3' ? 'assets/docs/ejercicio3.txt' :
+                null;
+
+      if (file) {
+        fetch(file)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Red error');
+            }
+            return response.text();
+          })
+          .then(data => {
+            console.log(`Cargando contenido de ${file}`); // Añadido para depuración
+            document.querySelector(codeBlockId).textContent = data;
+          })
+          .catch(error => console.error('Error cargando el archivo:', error));
+      }
+
+      card.querySelector('.form-check-label').addEventListener('click', function() {
+        if (codeView.style.display === 'block') {
+          codeView.style.display = 'none';
+          switchIcon.classList.remove('fa-toggle-on');
+          switchIcon.classList.add('fa-toggle-off');
+        } else {
+          codeView.style.display = 'block';
+          switchIcon.classList.remove('fa-toggle-off');
+          switchIcon.classList.add('fa-toggle-on');
+        }
       });
 
-      document.querySelectorAll('.btn-copy').forEach(button => {
-        button.addEventListener('click', function() {
-          const targetId = button.getAttribute('data-clipboard-target');
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            navigator.clipboard.writeText(targetElement.textContent)
-              .then(() => {
-                button.textContent = 'Código copiado!';
-                setTimeout(() => {
-                  button.textContent = 'Copiar código';
-                }, 2000);
-              })
-              .catch(err => {
-                console.error('Error al copiar el código: ', err);
-              });
-          }
-        });
+      button.addEventListener('click', function() {
+        const targetId = button.getAttribute('data-clipboard-target');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          navigator.clipboard.writeText(targetElement.textContent)
+            .then(() => {
+              button.textContent = 'Código copiado!';
+              setTimeout(() => {
+                button.textContent = 'Copiar código';
+              }, 2000);
+            })
+            .catch(err => {
+              console.error('Error al copiar el código: ', err);
+            });
+        }
       });
     });
-  </script>
+  });
 
+       
+</script>
+  
+  
+  
 </body>
 
 </html>
