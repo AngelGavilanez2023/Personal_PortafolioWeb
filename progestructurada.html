@@ -140,7 +140,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
+  <header id="header" class="fixed-top" style="background-color: black;">
     <div class="container d-flex align-items-center justify-content-between">
       <h1 class="logo">
         <a href="index.html#misrutinas" target="_blank">
@@ -160,246 +160,256 @@
       </nav><!-- .navbar -->
     </div>
   </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/fondo_general1.jpg)">
-    <div class="overlay-itro"></div>
-    <div class="hero-content display-table">
-      <div class="table-cell">
+  
+  <main id="main" >
+      <!-- ======= Seccion Mis Rutinas ======= -->
+      <section id="misrutinas" class="services-mf pt-5 route" style="margin-top: 75px;">
         <div class="container">
-          <main id="main">
-            <div class="card-group">
-              <!-- Tarjeta con el interruptor -->
-              <div class="card">
-                <div class="card-header">
-                  <h6 class="card-title mb-0">Calculadora Básica</h6>
-                  <label class="form-check-label text-muted">
-                    <i class="fas fa-toggle-off" id="switch-icon"></i>
-                    <h6>Código</h6>
-                  </label>
-                </div>
-                <div class="card-body">
-                  <p class="text-muted" style="text-align: justify">Crear una calculadora básica para operaciones aritméticas como: suma, resta, multiplicación y división.</p>
-                  <div class="code-view">
-                    <button class="btn btn-primary btn-copy" data-clipboard-target="#code-block-1">
-                      <i class="fas fa-copy"></i> Copiar código
-                    </button>
-                    <pre id="code-block-1">
-                        import java.util.Scanner;
-
-                        public class Calculadora {
-
-                            public static void main(String[] args) {
-                                Scanner scanner = new Scanner(System.in);
-                                
-                                System.out.println("Calculadora Básica");
-                                System.out.println("Selecciona una operación:");
-                                System.out.println("1. Sumar");
-                                System.out.println("2. Restar");
-                                System.out.println("3. Multiplicar");
-                                System.out.println("4. Dividir");
-
-                                int opcion = scanner.nextInt();
-
-                                System.out.println("Introduce el primer número:");
-                                double num1 = scanner.nextDouble();
-
-                                System.out.println("Introduce el segundo número:");
-                                double num2 = scanner.nextDouble();
-
-                                double resultado;
-
-                                switch (opcion) {
-                                    case 1:
-                                        resultado = num1 + num2;
-                                        System.out.println("El resultado de la suma es: " + resultado);
-                                        break;
-                                    case 2:
-                                        resultado = num1 - num2;
-                                        System.out.println("El resultado de la resta es: " + resultado);
-                                        break;
-                                    case 3:
-                                        resultado = num1 * num2;
-                                        System.out.println("El resultado de la multiplicación es: " + resultado);
-                                        break;
-                                    case 4:
-                                        if (num2 != 0) {
-                                            resultado = num1 / num2;
-                                            System.out.println("El resultado de la división es: " + resultado);
-                                        } else {
-                                            System.out.println("Error: División por cero no permitida.");
-                                        }
-                                        break;
-                                    default:
-                                        System.out.println("Opción inválida.");
-                                        break;
-                                }
-
-                                scanner.close();
-                            }
-                        }
-                    </pre>
-                  </div>
-                </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="title-box text-center">
+                <h3 class="title-a">
+                  Mi Rutina
+                </h3>
+                <p class="subtitle-a">
+                  Haz clic en cualquier contenido para evidenciar la práctica de mis Habilidades :)
+                </p>
+                <div class="line-mf"></div>
               </div>
-
-              <!-- Tarjeta con el interruptor -->
-              <div class="card">
-                <div class="card-header">
-                  <h6 class="card-title mb-0">Calculadora Básica</h6>
-                  <label class="form-check-label text-muted">
-                    <i class="fas fa-toggle-off" id="switch-icon"></i>
-                    <h6>Código</h6>
-                  </label>
-                </div>
-                <div class="card-body">
-                  <p class="text-muted" style="text-align: justify">Crear una calculadora básica para operaciones aritméticas como: suma, resta, multiplicación y división.</p>
-                  <div class="code-view">
-                    <button class="btn btn-primary btn-copy" data-clipboard-target="#code-block-1">
-                      <i class="fas fa-copy"></i> Copiar código
-                    </button>
-                    <pre id="code-block-1">
-                        import java.util.Scanner;
-
-                        public class Calculadora {
-
-                            public static void main(String[] args) {
-                                Scanner scanner = new Scanner(System.in);
-                                
-                                System.out.println("Calculadora Básica");
-                                System.out.println("Selecciona una operación:");
-                                System.out.println("1. Sumar");
-                                System.out.println("2. Restar");
-                                System.out.println("3. Multiplicar");
-                                System.out.println("4. Dividir");
-
-                                int opcion = scanner.nextInt();
-
-                                System.out.println("Introduce el primer número:");
-                                double num1 = scanner.nextDouble();
-
-                                System.out.println("Introduce el segundo número:");
-                                double num2 = scanner.nextDouble();
-
-                                double resultado;
-
-                                switch (opcion) {
-                                    case 1:
-                                        resultado = num1 + num2;
-                                        System.out.println("El resultado de la suma es: " + resultado);
-                                        break;
-                                    case 2:
-                                        resultado = num1 - num2;
-                                        System.out.println("El resultado de la resta es: " + resultado);
-                                        break;
-                                    case 3:
-                                        resultado = num1 * num2;
-                                        System.out.println("El resultado de la multiplicación es: " + resultado);
-                                        break;
-                                    case 4:
-                                        if (num2 != 0) {
-                                            resultado = num1 / num2;
-                                            System.out.println("El resultado de la división es: " + resultado);
-                                        } else {
-                                            System.out.println("Error: División por cero no permitida.");
-                                        }
-                                        break;
-                                    default:
-                                        System.out.println("Opción inválida.");
-                                        break;
-                                }
-
-                                scanner.close();
-                            }
-                        }
-                    </pre>
-                  </div>
-                </div>
-              </div>
-              <!-- Tarjeta con el interruptor -->
-              <div class="card">
-                <div class="card-header">
-                  <h6 class="card-title mb-0">Calculadora Básica</h6>
-                  <label class="form-check-label text-muted">
-                    <i class="fas fa-toggle-off" id="switch-icon"></i>
-                    <h6>Código</h6>
-                  </label>
-                </div>
-                <div class="card-body">
-                  <p class="text-muted" style="text-align: justify">Crear una calculadora básica para operaciones aritméticas como: suma, resta, multiplicación y división.</p>
-                  <div class="code-view">
-                    <button class="btn btn-primary btn-copy" data-clipboard-target="#code-block-1">
-                      <i class="fas fa-copy"></i> Copiar código
-                    </button>
-                    <pre id="code-block-1">
-                        import java.util.Scanner;
-
-                        public class Calculadora {
-
-                            public static void main(String[] args) {
-                                Scanner scanner = new Scanner(System.in);
-                                
-                                System.out.println("Calculadora Básica");
-                                System.out.println("Selecciona una operación:");
-                                System.out.println("1. Sumar");
-                                System.out.println("2. Restar");
-                                System.out.println("3. Multiplicar");
-                                System.out.println("4. Dividir");
-
-                                int opcion = scanner.nextInt();
-
-                                System.out.println("Introduce el primer número:");
-                                double num1 = scanner.nextDouble();
-
-                                System.out.println("Introduce el segundo número:");
-                                double num2 = scanner.nextDouble();
-
-                                double resultado;
-
-                                switch (opcion) {
-                                    case 1:
-                                        resultado = num1 + num2;
-                                        System.out.println("El resultado de la suma es: " + resultado);
-                                        break;
-                                    case 2:
-                                        resultado = num1 - num2;
-                                        System.out.println("El resultado de la resta es: " + resultado);
-                                        break;
-                                    case 3:
-                                        resultado = num1 * num2;
-                                        System.out.println("El resultado de la multiplicación es: " + resultado);
-                                        break;
-                                    case 4:
-                                        if (num2 != 0) {
-                                            resultado = num1 / num2;
-                                            System.out.println("El resultado de la división es: " + resultado);
-                                        } else {
-                                            System.out.println("Error: División por cero no permitida.");
-                                        }
-                                        break;
-                                    default:
-                                        System.out.println("Opción inválida.");
-                                        break;
-                                }
-
-                                scanner.close();
-                            }
-                        }
-                    </pre>
-                  </div>
-                </div>
-              </div>
-
-
-              <!-- Repite el bloque de la tarjeta para agregar más tarjetas -->
-              <!-- Añade aquí más tarjetas como el ejemplo anterior -->
-
             </div>
-          </main><!-- End #main -->
-        </div>
-      </div>
-    </div>
-  </div><!-- End Hero Section -->
+          </div>
+          <div class="row">
+            <!-- Ejercicio 1 -->
+            <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <h6 class="card-title mb-0">Calculadora Básica</h6>
+                      <label class="form-check-label text-muted">
+                        <i class="fas fa-toggle-off" id="switch-icon"></i>
+                        <span>Código</span>
+                      </label>
+                    </div>
+                    <div class="card-body">
+                      <p class="text-muted" style="text-align: justify">Crear una calculadora básica para operaciones aritméticas como: suma, resta, multiplicación y división.</p>
+                      <div class="code-view">
+                        <button class="btn-copy" data-clipboard-target="#code-block-1">
+                          <i class="fas fa-copy"></i> Copiar código
+                        </button>
+                        <pre id="code-block-1">
+import java.util.Scanner;
+
+public class Calculadora {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Calculadora Básica");
+        System.out.println("Selecciona una operación:");
+        System.out.println("1. Sumar");
+        System.out.println("2. Restar");
+        System.out.println("3. Multiplicar");
+        System.out.println("4. Dividir");
+
+        int opcion = scanner.nextInt();
+
+        System.out.println("Introduce el primer número:");
+        double num1 = scanner.nextDouble();
+
+        System.out.println("Introduce el segundo número:");
+        double num2 = scanner.nextDouble();
+
+        double resultado;
+
+        switch (opcion) {
+            case 1:
+                resultado = num1 + num2;
+                System.out.println("El resultado de la suma es: " + resultado);
+                break;
+            case 2:
+                resultado = num1 - num2;
+                System.out.println("El resultado de la resta es: " + resultado);
+                break;
+            case 3:
+                resultado = num1 * num2;
+                System.out.println("El resultado de la multiplicación es: " + resultado);
+                break;
+            case 4:
+                if (num2 != 0) {
+                    resultado = num1 / num2;
+                    System.out.println("El resultado de la división es: " + resultado);
+                } else {
+                    System.out.println("Error: División por cero no permitida.");
+                }
+                break;
+            default:
+                System.out.println("Opción inválida.");
+                break;
+        }
+
+        scanner.close();
+    }
+}
+                        </pre>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <!-- Ejercicio 2 -->
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-header">
+                  <h6 class="card-title mb-0">Calculadora Básica</h6>
+                  <label class="form-check-label text-muted">
+                    <i class="fas fa-toggle-off" id="switch-icon"></i>
+                    <span>Código</span>
+                  </label>
+                </div>
+                <div class="card-body">
+                  <p class="text-muted" style="text-align: justify">Crear una calculadora básica para operaciones aritméticas como: suma, resta, multiplicación y división.</p>
+                  <div class="code-view">
+                    <button class="btn-copy" data-clipboard-target="#code-block-1">
+                      <i class="fas fa-copy"></i> Copiar código
+                    </button>
+                    <pre id="code-block-1">
+import java.util.Scanner;
+
+public class Calculadora {
+
+public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    
+    System.out.println("Calculadora Básica");
+    System.out.println("Selecciona una operación:");
+    System.out.println("1. Sumar");
+    System.out.println("2. Restar");
+    System.out.println("3. Multiplicar");
+    System.out.println("4. Dividir");
+
+    int opcion = scanner.nextInt();
+
+    System.out.println("Introduce el primer número:");
+    double num1 = scanner.nextDouble();
+
+    System.out.println("Introduce el segundo número:");
+    double num2 = scanner.nextDouble();
+
+    double resultado;
+
+    switch (opcion) {
+        case 1:
+            resultado = num1 + num2;
+            System.out.println("El resultado de la suma es: " + resultado);
+            break;
+        case 2:
+            resultado = num1 - num2;
+            System.out.println("El resultado de la resta es: " + resultado);
+            break;
+        case 3:
+            resultado = num1 * num2;
+            System.out.println("El resultado de la multiplicación es: " + resultado);
+            break;
+        case 4:
+            if (num2 != 0) {
+                resultado = num1 / num2;
+                System.out.println("El resultado de la división es: " + resultado);
+            } else {
+                System.out.println("Error: División por cero no permitida.");
+            }
+            break;
+        default:
+            System.out.println("Opción inválida.");
+            break;
+    }
+
+    scanner.close();
+}
+}
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Ejercicio 3 -->
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-header">
+                  <h6 class="card-title mb-0">Calculadora Básica</h6>
+                  <label class="form-check-label text-muted">
+                    <i class="fas fa-toggle-off" id="switch-icon"></i>
+                    <span>Código</span>
+                  </label>
+                </div>
+                <div class="card-body">
+                  <p class="text-muted" style="text-align: justify">Crear una calculadora básica para operaciones aritméticas como: suma, resta, multiplicación y división.</p>
+                  <div class="code-view">
+                    <button class="btn-copy" data-clipboard-target="#code-block-1">
+                      <i class="fas fa-copy"></i> Copiar código
+                    </button>
+                    <pre id="code-block-1">
+import java.util.Scanner;
+
+public class Calculadora {
+
+public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    
+    System.out.println("Calculadora Básica");
+    System.out.println("Selecciona una operación:");
+    System.out.println("1. Sumar");
+    System.out.println("2. Restar");
+    System.out.println("3. Multiplicar");
+    System.out.println("4. Dividir");
+
+    int opcion = scanner.nextInt();
+
+    System.out.println("Introduce el primer número:");
+    double num1 = scanner.nextDouble();
+
+    System.out.println("Introduce el segundo número:");
+    double num2 = scanner.nextDouble();
+
+    double resultado;
+
+    switch (opcion) {
+        case 1:
+            resultado = num1 + num2;
+            System.out.println("El resultado de la suma es: " + resultado);
+            break;
+        case 2:
+            resultado = num1 - num2;
+            System.out.println("El resultado de la resta es: " + resultado);
+            break;
+        case 3:
+            resultado = num1 * num2;
+            System.out.println("El resultado de la multiplicación es: " + resultado);
+            break;
+        case 4:
+            if (num2 != 0) {
+                resultado = num1 / num2;
+                System.out.println("El resultado de la división es: " + resultado);
+            } else {
+                System.out.println("Error: División por cero no permitida.");
+            }
+            break;
+        default:
+            System.out.println("Opción inválida.");
+            break;
+    }
+
+    scanner.close();
+}
+}
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- Fin row -->
+        </div><!-- Fin container -->
+      </section><!-- Fin Mis Rutinas -->
+    
+
+  </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer>
