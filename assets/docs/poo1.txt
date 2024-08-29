@@ -1,0 +1,72 @@
+
+public class Libro {
+    // Atributos
+    private String titulo;
+    private String autor;
+    private int paginas;
+
+    // Constructor
+    public Libro(String titulo, String autor, int paginas) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.paginas = paginas;
+    }
+
+    // Métodos getter y setter para el título
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    // Métodos getter y setter para el autor
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    // Métodos getter y setter para el número de páginas
+    public int getPaginas() {
+        return paginas;
+    }
+
+    public void setPaginas(int paginas) {
+        this.paginas = paginas;
+    }
+
+    // Método para mostrar información del libro
+    public void mostrarInformacion() {
+        System.out.println("Título: " + titulo);
+        System.out.println("Autor: " + autor);
+        System.out.println("Páginas: " + paginas);
+    }
+}
+
+//************** Main ***************************************
+//*************** POO ****************************************
+public class Biblioteca {
+    public static void main(String[] args) {
+        // Crear algunos objetos Libro
+        Libro libro1 = new Libro("Cien años de soledad", "Gabriel García Márquez", 417);
+        Libro libro2 = new Libro("1984", "George Orwell", 328);
+
+        // Mostrar información de los libros
+        System.out.println("Información del Libro 1:");
+        libro1.mostrarInformacion();
+        
+        System.out.println("\nInformación del Libro 2:");
+        libro2.mostrarInformacion();
+
+        // Modificar el número de páginas del primer libro
+        libro1.setPaginas(420);
+
+        // Mostrar la información actualizada del primer libro
+        System.out.println("\nInformación actualizada del Libro 1:");
+        libro1.mostrarInformacion();
+    }
+}
