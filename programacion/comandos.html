@@ -9,20 +9,20 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/logo.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="../assets/img/logo.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Iconos -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -143,18 +143,17 @@
   <header id="header" class="fixed-top" style="background-color: black;">
     <div class="container d-flex align-items-center justify-content-between">
       <h1 class="logo">
-        <a href="index.html#misrutinas" target="_blank">
+        <a href="../index.html#misrutinas">
           <i class="bi bi-arrow-return-left"></i> Regresar
         </a>
       </h1>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Prog. Estructurada</a></li>
+          <li><a class="nav-link scrollto active" href="progestructurada.html">Prog. Estructurada</a></li>
           <li><a class="nav-link scrollto" href="poo.html">POO</a></li>
           <li><a class="nav-link scrollto" href="sql.html">SQL</a></li>
           <li><a class="nav-link scrollto" href="git.html">GIT</a></li>
           <li><a class="nav-link scrollto" href="comandos.html">Comandos Linux/Win.</a></li>
-          <li><a class="nav-link scrollto" href="excel.html">Excel</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -163,17 +162,17 @@
   
   <main id="main" >
       <!-- ======= Seccion Mis Rutinas ======= -->
-      <section id="misrutinas" class="services-mf pt-5 route" style="margin-top: 75px;">
+      <section id="misrutinas" class="services-mf pt-5 route" style="margin-top: 75px; background-color: rgb(255, 255, 255);">
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
               <div class="title-box text-center">
                 <h3 class="title">
-                  Prog. Estructurada
+                  Comandos de consola Linux y Windows
                 </h3>
                 <p class="subtitle-a">
-                  Cada Ejercicio presenta la solución del mismo mediante código en Java 
-                  <i class="bi bi-cup-hot"></i> 
+                  Serie de comandos para la consola.
+                   
                 </p>
                 <div class="line-mf"></div>
               </div>
@@ -191,7 +190,7 @@
                       </label>
                     </div>
                     <div class="card-body">
-                      <p class="text-muted" style="text-align: justify">Crear una calculadora básica para realizar operaciones aritméticas como: suma, resta, multiplicación y división.</p>
+                      <p class="text-muted" style="text-align: justify">En progreso.</p>
                       <div class="code-view">
                         <button class="btn-copy" data-clipboard-target="#code-block-1">
                           <i class="fas fa-copy"></i> Copiar código
@@ -282,15 +281,15 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
 
   <script>
     
@@ -304,7 +303,7 @@
       var codeBlockId = button.getAttribute('data-clipboard-target');
 
       // Determina el archivo correcto para cada botón de copia
-      var file = codeBlockId === '#code-block-1' ? 'assets/docs/ejercicio1.txt' :
+      var file = codeBlockId === '#code-block-1' ? 'assets/docs/sql1.txt' :
                 codeBlockId === '#code-block-2' ? 'assets/docs/ejercicio2.txt' :
                 codeBlockId === '#code-block-3' ? 'assets/docs/ejercicio3.txt' :
                 null;
