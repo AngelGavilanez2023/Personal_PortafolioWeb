@@ -1,0 +1,11 @@
+INSERT INTO clientes (nombre, edad, ciudad)
+VALUES ('Rodrigo', 22, 'Latacunga');
+
+UPDATE clientes
+SET edad = 23
+WHERE nombre = 'Rodrigo';
+
+DELETE FROM clientes
+WHERE nombre = 'Rodrigo';
+
+SELECT * FROM clientes;

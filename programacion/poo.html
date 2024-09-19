@@ -149,8 +149,8 @@
       </h1>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="progestructurada.html">Prog. Estructurada</a></li>
-          <li><a class="nav-link scrollto" href="poo.html">POO</a></li>
+          <li><a class="nav-link scrollto" href="progestructurada.html">Prog. Estructurada</a></li>
+          <li><a class="nav-link scrollto active" href="poo.html">POO</a></li>
           <li><a class="nav-link scrollto" href="sql.html">SQL</a></li>
           <li><a class="nav-link scrollto" href="git.html">GIT</a></li>
           <li><a class="nav-link scrollto" href="comandos.html">Comandos Linux/Win.</a></li>
@@ -303,7 +303,7 @@
       var codeBlockId = button.getAttribute('data-clipboard-target');
 
       // Determina el archivo correcto para cada botón de copia
-      var file = codeBlockId === '#code-block-1' ? 'assets/docs/poo1.txt' :
+      var file = codeBlockId === '#code-block-1' ? '../assets/docs/poo/poo1.txt' :
                 codeBlockId === '#code-block-2' ? 'assets/docs/ejercicio2.txt' :
                 codeBlockId === '#code-block-3' ? 'assets/docs/ejercicio3.txt' :
                 null;
