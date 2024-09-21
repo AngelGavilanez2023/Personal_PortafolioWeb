@@ -1,0 +1,27 @@
+--****************1. Create ******************
+CREATE TABLE empleados (
+    id INT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    puesto VARCHAR(50),
+    salario DECIMAL(10, 2)
+);
+
+CREATE INDEX idx_nombre ON empleados(nombre);
+
+--****************2. Alter ******************
+ALTER TABLE empleados
+ADD fecha_contratacion DATE;
+
+ALTER TABLE empleados
+MODIFY salario DECIMAL(12, 2);
+
+ALTER TABLE empleados
+DROP COLUMN puesto;
+
+--****************3. Drop ******************
+DROP TABLE empleados;
+
+DROP INDEX idx_nombre ON empleados;
+
+--****************4. Truncate ******************
+TRUNCATE TABLE empleados;

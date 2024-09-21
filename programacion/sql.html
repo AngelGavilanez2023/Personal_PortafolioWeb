@@ -225,9 +225,21 @@
                   </label>
                 </div>
                 <div class="card-body">
-                  <p class="text-muted" style="text-align: justify">Próximo ejercicio mañana acorde a la fecha.</p>
+                  <p class="text-muted" style="text-align: justify">DDL (Data Definition Language) son utilizadas para definir o modificar la estructura de la base de datos, como tablas, índices. 
+                  <br>
+                  <br>
+                  Los comandos DDL incluyen:
+                  </p>
+                  
+                  <ul>
+                    <li>Create</li>
+                    <li>Alter</li>
+                    <li>Drop</li>
+                    <li>Truncate</li>
+                  </ul>
+                  <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">20 Sept. 2024</span></b>
                   <div class="code-view">
-                    <button class="btn-copy" data-clipboard-target="#code-block-1">
+                    <button class="btn-copy" data-clipboard-target="#code-block-2">
                       <i class="fas fa-copy"></i> Copiar código
                     </button>
                     <pre id="code-block-2">
@@ -248,12 +260,45 @@
                   </label>
                 </div>
                 <div class="card-body">
-                  <p class="text-muted" style="text-align: justify">Pendiente.</p>
+                  <p class="text-muted" style="text-align: justify">TCL (Transaction Control Language) se utilizan para gestionar transacciones dentro de una base de datos. <br>
+                  <br>Los comandos TCL incluyen:
+                 
+                  </p>
+                  <ul>
+                    <li>COMMIT</li>
+                    <li>ROLLBACK</li>
+                    <li>SAVEPOINT</li>
+                  </ul>
+                  <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">21 Sept. 2024</span></b>
                   <div class="code-view">
-                    <button class="btn-copy" data-clipboard-target="#code-block-1">
+                    <button class="btn-copy" data-clipboard-target="#code-block-3">
                       <i class="fas fa-copy"></i> Copiar código
                     </button>
                     <pre id="code-block-3">
+                      <!-- codigo desde archivo .txt -->
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Ejercicio 4 -->
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-header">
+                  <h6 class="card-title mb-0">Ejercicio 4:</h6>
+                  <label class="form-check-label text-muted">
+                    <i class="fas fa-toggle-off" id="switch-icon"></i>
+                    <span>Código</span>
+                  </label>
+                </div>
+                <div class="card-body">
+                  <p class="text-muted" style="text-align: justify">Pendiente.</p>
+                  <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">22 Sept. 2024</span></b>
+                  <div class="code-view">
+                    <button class="btn-copy" data-clipboard-target="#code-block-4">
+                      <i class="fas fa-copy"></i> Copiar código
+                    </button>
+                    <pre id="code-block-4">
                       <!-- codigo desde archivo .txt -->
                     </pre>
                   </div>
@@ -316,8 +361,8 @@
 
       // Determina el archivo correcto para cada botón de copia
       var file = codeBlockId === '#code-block-1' ? '../assets/docs/sql/DML1.txt' :
-                codeBlockId === '#code-block-2' ? 'assets/docs/ejercicio2.txt' :
-                codeBlockId === '#code-block-3' ? 'assets/docs/ejercicio3.txt' :
+                codeBlockId === '#code-block-2' ? '../assets/docs/sql/sql2.txt' :
+                codeBlockId === '#code-block-3' ? '../assets/docs/sql/sql3.txt' :
                 null;
 
       if (file) {

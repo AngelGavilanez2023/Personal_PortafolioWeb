@@ -1,0 +1,39 @@
+--***********************1. commit ***************************
+START TRANSACTION;
+
+-- Insertar datos en la tabla de empleados
+INSERT INTO empleados (nombre, puesto, salario) VALUES ('Juan', 'Desarrollador', 40000);
+
+-- Cambiar el salario de otro empleado
+UPDATE empleados SET salario = 50000 WHERE nombre = 'Pedro';
+
+-- Guardar los cambios
+COMMIT;
+
+--***********************2. rollback ***************************
+START TRANSACTION;
+
+-- Insertar un nuevo empleado
+INSERT INTO empleados (nombre, puesto, salario) VALUES ('Ana', 'Analista', 35000);
+
+-- Cambiar el puesto de otro empleado
+UPDATE empleados SET puesto = 'Gerente' WHERE nombre = 'Juan';
+
+-- Deshacer los cambios
+ROLLBACK;
+
+--***********************3. savepoint y rollback to ***************************
+START TRANSACTION;
+
+-- Insertar varios registros
+INSERT INTO empleados (nombre, puesto, salario) VALUES ('Luis', 'Administrador', 45000);
+SAVEPOINT punto1; -- Crear un punto de guardado
+
+INSERT INTO empleados (nombre, puesto, salario) VALUES ('Carlos', 'Ingeniero', 50000);
+SAVEPOINT punto2; -- Crear otro punto de guardado
+
+-- Deshacer los cambios hasta el primer SAVEPOINT
+ROLLBACK TO punto1;
+
+-- Guardar los cambios
+COMMIT;

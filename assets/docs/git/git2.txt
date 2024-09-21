@@ -1,0 +1,9 @@
+0. git status
+1. git init
+2. git add .
+	2.1 git add index.html
+	2.2 git --amend --no-edit
+	2.3 git push force
+3. git commit -m "Mi version"
+4. git push -u origin main
+	4.1 git push

@@ -1,0 +1,16 @@
+public class AsteriscoPatron {
+    public static void main(String[] args) {
+        // Número de filas que tendrá la pirámide
+        int filas = 5;
+        System.out.println();
+        // Bucle externo para las filas
+        for (int i = 1; i <= filas; i++) {
+            // Bucle interno para imprimir los asteriscos en cada fila
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            // Salto de línea después de cada fila
+            System.out.println();
+        }
+    }
+}

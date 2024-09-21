@@ -1,0 +1,68 @@
+// Clase base Animal
+class Animal {
+    protected String nombre;
+    protected int edad;
+
+    // Constructor de la clase Animal
+    public Animal(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    // Método para hacer un sonido genérico
+    public void hacerSonido() {
+        System.out.println("El animal hace un sonido.");
+    }
+
+    // Método para mostrar los datos del animal
+    public void mostrarDatos() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Edad: " + edad + " años");
+    }
+}
+
+// Clase Perro que hereda de Animal
+class Perro extends Animal {
+    // Constructor de la clase Perro
+    public Perro(String nombre, int edad) {
+        super(nombre, edad);
+    }
+
+    // Sobrescribimos el método hacerSonido
+    @Override
+    public void hacerSonido() {
+        System.out.println("El perro ladra: Guau Guau");
+    }
+}
+
+// Clase Gato que hereda de Animal
+class Gato extends Animal {
+    // Constructor de la clase Gato
+    public Gato(String nombre, int edad) {
+        super(nombre, edad);
+    }
+
+    // Sobrescribimos el método hacerSonido
+    @Override
+    public void hacerSonido() {
+        System.out.println("El gato maúlla: Miau Miau");
+    }
+}
+
+// Clase principal para probar las clases de animales
+public class EjemploAnimales {
+    public static void main(String[] args) {
+        // Creamos un perro y un gato
+        Perro perro = new Perro("Firulais", 5);
+        Gato gato = new Gato("Misu", 3);
+
+        // Mostramos los datos y los sonidos de los animales
+        System.out.println("Datos del Perro:");
+        perro.mostrarDatos();
+        perro.hacerSonido();
+
+        System.out.println("\nDatos del Gato:");
+        gato.mostrarDatos();
+        gato.hacerSonido();
+    }
+}

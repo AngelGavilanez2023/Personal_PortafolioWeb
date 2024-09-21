@@ -1,0 +1,69 @@
+0. git status
+1. git init
+2. git add .
+	2.1 git add index.html
+	2.2 git commit --amend --no-edit
+	2.3 git push --force
+3. git commit -m "Mi version"
+4. git push -u origin main
+5. git push
+******************* 2 *********************
+0. git status
+1. git init
+2. git add .
+	2.1 git add index.html
+	2.2 git commit --amend --no-edit
+	2.3 git push --force
+3. git commit -m "Mi version"
+4. git push -u origin main
+5. git push
+****************** 3 ********************
+0. git status
+1. git init
+2. git add .
+	2.1 git add index.html
+	2.2 git commit --amend --no-edit
+	2.3 git push --force
+3. git commit -m "Mi version"
+4. git push -u origin main
+5. git push
+***************** 4 *********************
+0. git status
+1. git init
+2. git add .
+	2.1 git add index.html
+	2.2 git commit --amend --no-edit
+	2.3 git push --force
+3. git commit -m "Mi version"
+4. git push -u origin main
+5. git push 
+**************** 5*********************
+0. git status
+1. git init
+2. git add .
+	2.1 git add index.html
+	2.2 git commit --amend --no-edit
+	2.3 git push --force
+3. git commit -m "Mi version"
+4. git push -u origin main
+5. git push
+****************6 ************************
+0. git status
+1. git init
+2. git add .
+	2.1 git add index.html
+	2.2 git commit --amend --no-edit
+	2.3 git push --force
+3. git commit -m "Mi Version"
+4. git push -u origin main
+5. git push
+************** 7 ********************
+0. git status
+1. git init
+2. git add .
+	2.1 git add index.html
+	2.2 git commit --amend --no-edit
+	2.3 git push --force
+3. git commit -m "Mi Version"
+4. git push -u origin main
+5. git push

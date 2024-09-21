@@ -1,0 +1,42 @@
+******* 1 *********
+1. %temp%
+2. temp
+3. prefetch
+4. eventvwr
+5. cleanmgr
+******* 2 *********
+1. %temp%
+2. temp
+3. prefetch
+4. eventvwr
+5. cleanmgr
+******* 3 ********
+1. %temp%
+2. temp
+3. prefetch
+4. eventvwr
+5. cleanmgr
+******* 4 *******
+1. %temp%
+2. temp
+3. prefetch
+4. eventvwr
+5. cleanmgr
+******* 5 *******
+1. %temp%
+2. temp
+3. prefetch
+4. eventvwr
+5. cleanmgr
+******* 6 *******
+1. %temp%
+2. temp
+3. prefetch
+4. eventvwr
+5. cleanmgr
+******* 7 *******
+1. %temp%
+2. temp
+3. prefetch
+4. eventvwr
+5. cleanmgr

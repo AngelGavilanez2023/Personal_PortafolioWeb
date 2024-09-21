@@ -1,0 +1,55 @@
+1. %temp%
+2. temp
+3. prefetch
+4. eventvwr
+5. cleanmgr
+6. control printers
+7. netsh wlan show profile name = "Internet.ATV" key=clear
+***********************2 *********************************
+1. %temp%
+2. temp
+3. prefetch
+4. eventvwr
+5. cleanmgr
+6. control printers
+7. netsh wlan show profile name = "miInternet.ATV" key=clear
+*********************3 **********************************
+1. %temp%
+2. temp
+3. prefetch
+4. eventvwr
+5. cleanmgr
+6. control printers
+7. netsh wlan show profile name = "miInternet.ATV" key=clear
+************************4 ****************************
+1. %temp%
+2. temp
+3. prefetch
+4. eventvwr
+5. cleanmgr
+6. control printers
+7. netsh wlan show profile name = "miInternet.ATV" key=clear
+**********************5 ****************************
+1. %temp%
+2. temp
+3. prefetch
+4. eventvwr
+5. cleanmgr
+6. control printers
+7. netsh wlan show profile name = "miInternet.ATV" key=clear
+***************************6**************************
+1. %temp%
+2. temp
+3. prefetch
+4. eventvwr
+5. cleanmgr
+6. control printers
+7. netsh wlan show profile name = "miInternet.ATV" key=clear
+*************************7******************************
+1. %temp%
+2. temp
+3. prefetch
+4. eventvwr
+5. cleanmgr
+6. control printers
+7. netsh wlan show profile name = "miInternet.ATV" key=clear

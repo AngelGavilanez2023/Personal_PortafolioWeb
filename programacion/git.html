@@ -207,16 +207,17 @@
             <div class="col-md-4">
               <div class="card">
                 <div class="card-header">
-                  <h6 class="card-title mb-0">Ejercicio 2:</h6>
+                  <h6 class="card-title mb-0">Repetición 2:</h6>
                   <label class="form-check-label text-muted">
                     <i class="fas fa-toggle-off" id="switch-icon"></i>
                     <span>Código</span>
                   </label>
                 </div>
                 <div class="card-body">
-                  <p class="text-muted" style="text-align: justify">Próximo ejercicio mañana acorde a la fecha.</p>
+                  <p class="text-muted" style="text-align: justify">Ciclo de comandos git para inicializar y enviar remotamente un repositorio.</p>
+                  <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">19 Sept. 2024</span></b>
                   <div class="code-view">
-                    <button class="btn-copy" data-clipboard-target="#code-block-1">
+                    <button class="btn-copy" data-clipboard-target="#code-block-2">
                       <i class="fas fa-copy"></i> Copiar código
                     </button>
                     <pre id="code-block-2">
@@ -230,7 +231,31 @@
             <div class="col-md-4">
               <div class="card">
                 <div class="card-header">
-                  <h6 class="card-title mb-0">Ejercicio 3:</h6>
+                  <h6 class="card-title mb-0">Repetición 3:</h6>
+                  <label class="form-check-label text-muted">
+                    <i class="fas fa-toggle-off" id="switch-icon"></i>
+                    <span>Código</span>
+                  </label>
+                </div>
+                <div class="card-body">
+                  <p class="text-muted" style="text-align: justify">Ciclo de comandos git para inicializar y enviar remotamente un repositorio..</p>
+                  <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">21 Sept. 2024</span></b>
+                  <div class="code-view">
+                    <button class="btn-copy" data-clipboard-target="#code-block-3">
+                      <i class="fas fa-copy"></i> Copiar código
+                    </button>
+                    <pre id="code-block-3">
+                      <!-- codigo desde archivo .txt -->
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Ejercicio 4 -->
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-header">
+                  <h6 class="card-title mb-0">Repetición 4:</h6>
                   <label class="form-check-label text-muted">
                     <i class="fas fa-toggle-off" id="switch-icon"></i>
                     <span>Código</span>
@@ -238,8 +263,9 @@
                 </div>
                 <div class="card-body">
                   <p class="text-muted" style="text-align: justify">Pendiente.</p>
+                  <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">22 Sept. 2024</span></b>
                   <div class="code-view">
-                    <button class="btn-copy" data-clipboard-target="#code-block-1">
+                    <button class="btn-copy" data-clipboard-target="#code-block-3">
                       <i class="fas fa-copy"></i> Copiar código
                     </button>
                     <pre id="code-block-3">
@@ -304,9 +330,9 @@
       var codeBlockId = button.getAttribute('data-clipboard-target');
 
       // Determina el archivo correcto para cada botón de copia
-      var file = codeBlockId === '#code-block-1' ? 'assets/docs/sql1.txt' :
-                codeBlockId === '#code-block-2' ? 'assets/docs/ejercicio2.txt' :
-                codeBlockId === '#code-block-3' ? 'assets/docs/ejercicio3.txt' :
+      var file = codeBlockId === '#code-block-1' ? '../assets/docs/git/git1.jfif' :
+                codeBlockId === '#code-block-2' ? '../assets/docs/git/git2.txt' :
+                codeBlockId === '#code-block-3' ? '../assets/docs/git/git3.txt' :
                 null;
 
       if (file) {

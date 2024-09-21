@@ -1,0 +1,52 @@
+// Clase Coche
+class Coche {
+    private String marca;
+    private String modelo;
+    private int anio;
+    private int velocidad;
+
+    // Constructor
+    public Coche(String marca, String modelo, int anio) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.anio = anio;
+        this.velocidad = 0; // La velocidad inicial es 0
+    }
+
+    // Método para mostrar la información del coche
+    public void mostrarInfo() {
+        System.out.println("Marca: " + marca);
+        System.out.println("Modelo: " + modelo);
+        System.out.println("Año: " + anio);
+        System.out.println("Velocidad: " + velocidad + " km/h");
+    }
+
+    // Método para acelerar
+    public void acelerar(int incremento) {
+        velocidad += incremento;
+        System.out.println("Acelerando... Nueva velocidad: " + velocidad + " km/h");
+    }
+
+    // Método para frenar
+    public void frenar(int decremento) {
+        velocidad -= decremento;
+        if (velocidad < 0) velocidad = 0; // La velocidad no puede ser negativa
+        System.out.println("Frenando... Nueva velocidad: " + velocidad + " km/h");
+    }
+}
+
+// Clase principal
+public class Main {
+    public static void main(String[] args) {
+        // Crear un objeto Coche
+        Coche miCoche = new Coche("Toyota", "Corolla", 2020);
+        
+        // Mostrar la información del coche
+        miCoche.mostrarInfo();
+        
+        // Acelerar y frenar
+        miCoche.acelerar(50);
+        miCoche.frenar(20);
+        miCoche.frenar(40);
+    }
+}
