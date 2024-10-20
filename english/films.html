@@ -9,7 +9,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="../assets/img/logo.png" rel="icon"> 
+  <link href="../assets/img/logo.png" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Iconos -->
@@ -26,56 +26,9 @@
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
   <style>
-    .card {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      width: 100%;
-      max-width: 400px;
-      height: 250px;
-      overflow: hidden;
-      margin: 20px auto;
-      position: relative;
-    }
-
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 15px;
-      border-bottom: 1px solid #ddd;
-      background-color: #e9ecef;
-    }
-
-    .card-body {
-      padding: 15px;
-      overflow-y: auto;
-      height: calc(100% - 55px);
-    }
-
-    .code-view {
-      display: none;
-    }
-
-    .card.expanded .code-view {
-      display: block;
-    }
-
-    .card-body pre {
-      white-space: pre; /* Mantiene el formato del código */
-      overflow-x: auto; /* Añade barra de desplazamiento horizontal */
-      overflow-y: auto; /* Añade barra de desplazamiento vertical si es necesario */
-      margin: 0;
-      padding: 10px;
-      background-color: #f8f9fa;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      text-align: left;
-    }
-
     .btn-copy {
       display: inline-flex;
       align-items: center;
@@ -112,27 +65,30 @@
       font-size: 16px;
     }
 
-    .card-group {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+    /* Estilos para la tabla con scroll */
+    .table-scroll {
+      max-height: 150px;
+      /* Ajusta la altura máxima según lo necesites */
+      overflow-y: auto;
+      /* Habilita el scroll vertical */
+      display: block;
+      /* Hace que el contenedor sea un bloque */
     }
 
-    .card-group .card {
-      flex: 1 1 calc(33.333% - 40px);
-      margin: 20px;
+    .table {
+      width: 100%;
+      /* Asegura que la tabla use el 100% del ancho */
+      table-layout: fixed;
+      /* Asegura que las celdas tengan un ancho fijo */
     }
 
-    @media (max-width: 768px) {
-      .card-group .card {
-        flex: 1 1 calc(50% - 40px);
-      }
+    .vocabulary-list {
+      list-style-type: none;
+      padding: 0;
     }
 
-    @media (max-width: 576px) {
-      .card-group .card {
-        flex: 1 1 100%;
-      }
+    .vocabulary-list li {
+      padding: 5px 0;
     }
   </style>
 </head>
@@ -156,85 +112,87 @@
       </nav><!-- .navbar -->
     </div>
   </header><!-- End Header -->
-  
+
   <main id="main">
-      <!-- ======= Seccion Mis Rutinas ======= -->
-      <section id="misrutinas" class="services-mf pt-5 route" style="margin-top: 75px;">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="title-box text-center">
-                <h3 class="title">
-                  Films
-                </h3>
-                <p class="subtitle-a">
-                    Desperate Housewives (2004 2012) The &quot;normal&quot; suburban life for a group of close-knit housewives 
-                  <i class="bi bi-film"></i>
+    <!-- ======= Seccion Mis Rutinas ======= -->
+    <section id="misrutinas" class="services-mf pt-5 route" style="margin-top: 75px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title">Films</h3>
+              <p class="subtitle-a">
+                Desperate Housewives (2004 2012) The "normal" suburban life for a group of close-knit housewives
+                <i class="bi bi-film"></i>
+              </p>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
+        <h5 class="title">Season 01</h5>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card border-primary mb-3">
+              <div class="card-header">Episode 01</div>
+              <img src="../assets/docs/films/S01-E01.png" class="card-img p-3" aria-colspan="Episode 01">
+              <div class="card-body">
+                <p id="plot-text-1" class="card-text">
+                  Mary Alice takes her own life, taking us into the lives of her family, friends, and neighbors.
                 </p>
-                <div class="line-mf"></div>
+                <button class="btn btn-primary btn-play" onclick="togglePlay('plot-text-1')">
+                  <i id="play-icon-1" class="bi bi-play-circle"></i> Play
+                </button>
+
+                <h6>Vocabulary</h6>
+                <ul class="vocabulary-list">
+                  <li><strong>Phrase 1:</strong> definition or translation</li>
+                  <li><strong>Phrase 2:</strong> definition or translation</li>
+                  <!-- Add more vocabulary items as needed -->
+                </ul>
+
               </div>
             </div>
           </div>
-          <h5 class="title">
-            Season 01
-          </h5>
-          <div class="row">
-            <!-- Ejercicio 1 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header">
-                        <h6 class="card-title mb-0">Episode 01:</h6>
-                        <label class="form-check-label text-muted">
-                            <i class="fas fa-toggle-off" id="switch-icon-1"></i>
-                            <span>Vocabulary</span>
-                        </label>
-                    </div>
-                    <div class="card-body">
-                        <p class="text-muted" style="display: flex; flex-direction: column; align-items: center;">
-                            <img src="../assets/docs/films/S01-E01.png" style="height: 125px; width: 300px;">
-                        </p>
-                        <p class="text-muted" id="plot-text">
-                            <b>Plot:</b>
-                            Mary Alice takes her own life, taking us into the lives of her family, friends, and neighbors; at Mary Alice's funeral, Susan meets Mike, a new neighbor.
-                            <button class="btn btn-primary btn-play" style="margin-left: 10px;" onclick="togglePlay()">
-                                <i class="bi bi-play-circle" id="play-icon" style="font-size: 18px;"></i>
-                            </button>
-                        </p>
-                        <b><span class="w-ctegory" style="color: #007bff;">Posted</span> / <span class="w-date"> September 21, 2024</span></b>
-                        <div class="code-view" id="code-view-1">
-                            <pre id="code-block-1">
-                                <table class="table table-bordered">
-                                    <thead class="thead-light">
-                                        <tr>
-                                            <th>Phrase</th>
-                                            <th>Translate</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Text 1</td>
-                                            <td>Text 1</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Text 2</td>
-                                            <td>Text 2</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Text 3</td>
-                                            <td>Text 3</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </pre>
-                        </div>
-                    </div>
+
+          <!-- card 2 -->
+          <div class="col-md-4">
+            <div class="card border-primary mb-3">
+              <div class="card-header">Episode 02</div>
+              <img src="../assets/docs/films/S01-E01.png" class="card-img p-3" aria-colspan="Episode 01">
+              <div class="card-body">
+                <p id="plot-text-2" class="card-text ">
+                  I'm a student in my town
+                </p>
+                <button class="btn btn-primary btn-play" onclick="togglePlay('plot-text-2')">
+                  <i id="play-icon-2" class="bi bi-play-circle"></i> Play
+                </button>
+                <div class="table-scroll"> <!-- Contenedor para el scroll -->
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Phrase 1</th>
+                        <th>Phrase 2</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>data 1</td>
+                        <td>data 1</td>
+                      </tr>
+                      <!-- más filas -->
+                    </tbody>
+                  </table>
                 </div>
+              </div>
             </div>
-            
-            
-          </div><!-- Fin row -->
-        </div><!-- Fin container -->
-      </section><!-- Fin Mis Rutinas -->
+          </div>
+
+          <!-- ... (código de las otras tarjetas) ... -->
+
+        </div> <!-- Fin row -->
+
+      </div><!-- Fin container -->
+    </section><!-- Fin Mis Rutinas -->
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -263,76 +221,41 @@
   <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="../assets/vendor/typed.js/typed.umd.js"></script>
   <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
 
   <script>
-    let utterance;
-    let isPlaying = false;
+    function togglePlay(plotId) {
+      const plotText = document.getElementById(plotId).textContent;
+      const playButton = document.querySelector(`button[onclick="togglePlay('${plotId}')"]`);
+      const playIcon = playButton.querySelector('i');
 
-    function togglePlay() {
-        const plotText = document.querySelector('#plot-text').textContent;
-
-        if (isPlaying) {
-            speechSynthesis.pause();
-            document.getElementById("play-icon").classList.remove("bi-pause-circle");
-            document.getElementById("play-icon").classList.add("bi-play-circle");
-            isPlaying = false;
-        } else {
-            if (speechSynthesis.speaking) {
-                speechSynthesis.resume(); // Reanuda la reproducción
-                document.getElementById("play-icon").classList.remove("bi-play-circle");
-                document.getElementById("play-icon").classList.add("bi-pause-circle");
-                isPlaying = true;
-            } else {
-                utterance = new SpeechSynthesisUtterance(plotText);
-                utterance.lang = 'en-US';
-
-                const voices = window.speechSynthesis.getVoices();
-                const usVoice = voices.find(voice => voice.name.includes('Google US') || voice.lang === 'en-US');
-
-                if (usVoice) {
-                    utterance.voice = usVoice;
-                }
-
-                utterance.onend = function() {
-                    document.getElementById("play-icon").classList.remove("bi-pause-circle");
-                    document.getElementById("play-icon").classList.add("bi-play-circle");
-                    isPlaying = false; // Pausa automáticamente al terminar
-                };
-
-                speechSynthesis.speak(utterance);
-                document.getElementById("play-icon").classList.remove("bi-play-circle");
-                document.getElementById("play-icon").classList.add("bi-pause-circle");
-                isPlaying = true;
-            }
+      if (isPlaying) {
+        speechSynthesis.pause();
+        playIcon.classList.replace('bi-pause-circle', 'bi-play-circle');
+      } else {
+        if (speechSynthesis.speaking) {
+          speechSynthesis.cancel();
         }
+        utterance = new SpeechSynthesisUtterance(plotText);
+        utterance.lang = 'en-US';
+        utterance.voice = speechSynthesis.getVoices().find(voice => voice.name === 'Google US English');
+        utterance.rate = 1;
+
+        speechSynthesis.speak(utterance);
+        playIcon.classList.replace('bi-play-circle', 'bi-pause-circle');
+      }
+
+      isPlaying = !isPlaying;
+
+      utterance.onend = () => {
+        isPlaying = false;
+        playIcon.classList.replace('bi-pause-circle', 'bi-play-circle');
+      };
     }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        var cards = document.querySelectorAll('.card');
-
-        cards.forEach(function(card) {
-            var codeView = card.querySelector('.code-view');
-            var switchIcon = card.querySelector('.form-check-label i');
-
-            card.querySelector('.form-check-label').addEventListener('click', function() {
-                if (codeView.style.display === 'block') {
-                    codeView.style.display = 'none';
-                    switchIcon.classList.remove('fa-toggle-on');
-                    switchIcon.classList.add('fa-toggle-off');
-                } else {
-                    codeView.style.display = 'block';
-                    switchIcon.classList.remove('fa-toggle-off');
-                    switchIcon.classList.add('fa-toggle-on');
-                }
-            });
-        });
-    });
-</script>
-
-
+  </script>
 </body>
 
 </html>

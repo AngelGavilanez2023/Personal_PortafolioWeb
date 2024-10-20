@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Algoritmos
+{
+    class EstructuradaC5
+    {
+        public void AreaCirculo()
+        {
+            Console.Write("Ingresa un número para el radio: ");
+            double radio = double.Parse(Console.ReadLine());
+
+            double area = Math.PI * Math.Pow(radio, 2);
+
+            Console.WriteLine($"El área del círculo con radio {radio} es: {area}");
+
+            // Esperar a que se presione una tecla antes de cerrar la consola
+            Console.WriteLine("Presiona cualquier tecla para salir...");
+            Console.ReadKey();
+
+        }
+    }
+}

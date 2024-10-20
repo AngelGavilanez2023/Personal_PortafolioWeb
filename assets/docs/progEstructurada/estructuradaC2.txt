@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Algoritmos
+{
+    class EstructuradaC2
+    {
+
+        public void triangulo()
+        {
+            // Número de filas
+            int filas = 5;
+
+            // Bucle para imprimir las filas
+            for (int i = 1; i <= filas; i++)
+            {
+                // Bucle para imprimir los asteriscos
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write("* ");
+                }
+                // Imprimir una nueva línea después de cada fila
+                Console.WriteLine();
+            }
+
+            // Esperar a que se presione una tecla antes de cerrar la consola
+            Console.WriteLine("Presiona cualquier tecla para salir...");
+            Console.ReadKey();
+        }
+
+
+
+    }
+}

@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Algoritmos
+{
+    class EstructuradaC9
+    {
+        public void Multiplo()
+        {
+            Console.Write("Ingrese el primero numero: ");
+            int num1 = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese el segundo numero: ");
+            int num2 = int.Parse(Console.ReadLine());
+
+            if (num1 % num2 == 0)
+            {
+                Console.WriteLine($"el numero: {num1} SI ES multiplo del numero {num2}");
+
+            }
+            else
+            {
+                Console.WriteLine("No son multiplos");
+
+            }
+
+            Console.WriteLine("Presiona cualquier tecla para terminar el programa");
+            Console.ReadKey();
+        }
+    }
+}

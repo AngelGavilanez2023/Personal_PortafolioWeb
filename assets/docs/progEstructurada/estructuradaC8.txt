@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Algoritmos
+{
+    class EstructuradaC8
+    {
+        public void NumPositivoNegativo()
+        {
+            Console.WriteLine("Ingresa un numero:");
+            int num1 = int.Parse(Console.ReadLine());
+
+            if (num1 < 0)
+            {
+                Console.WriteLine($"el numero: {num1} es negativo");
+
+            }
+            else
+            {
+                Console.WriteLine($"el numero: {num1} es positivo");
+
+            }
+            Console.WriteLine("Presione cualquier tecla para finalizar");
+            Console.ReadKey();
+
+        }
+    }
+}

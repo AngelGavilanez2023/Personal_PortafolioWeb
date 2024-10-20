@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Algoritmos
+{
+    class EstructuradaC6
+    {
+        public void CalcularLongitud()
+        {
+            Console.Write("Ingrese el radio de la circunferencia: ");
+            double radio = double.Parse(Console.ReadLine());
+
+            // Cálculo de la longitud
+            double longitud = 2 * Math.PI * radio;
+
+            // Mostrar el resultado
+            Console.WriteLine("La longitud de la circunferencia es: " + longitud);
+
+            Console.WriteLine("Presiona cualquier tecla para salir...");
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Estructurada4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        double a, b, c; // coeficientes de la ecuación ax^2 + bx + c = 0
+        double x1, x2, d; // soluciones y determinante
+        
+        // Solicitar los coeficientes al usuario
+        System.out.print("Introduzca primer coeficiente (a): ");
+        a = scanner.nextDouble();
+        
+        System.out.print("Introduzca segundo coeficiente (b): ");
+        b = scanner.nextDouble();
+        
+        System.out.print("Introduzca tercer coeficiente (c): ");
+        c = scanner.nextDouble();
+        
+        // Verificar que 'a' no sea cero
+        if (a == 0) {
+            System.out.println("El coeficiente 'a' no puede ser cero en una ecuación de segundo grado.");
+        } else {
+            // Calcular el determinante
+            d = (b * b) - (4 * a * c);
+            
+            // Verificar el valor del determinante
+            if (d < 0) {
+                System.out.println("No existen soluciones reales.");
+            } else {
+                // Calcular las soluciones
+                x1 = (-b + Math.sqrt(d)) / (2 * a);
+                x2 = (-b - Math.sqrt(d)) / (2 * a);
+                
+                // Mostrar las soluciones
+                System.out.println("Solución 1: " + x1);
+                System.out.println("Solución 2: " + x2);
+            }
+        }
+        
+        // Cerrar el escáner
+        scanner.close();
+    }
+}

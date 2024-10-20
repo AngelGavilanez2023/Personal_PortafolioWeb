@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Algoritmos
+{
+    class EstructuradaC3
+    {
+        public void NumeroPrimo()
+        {
+
+
+            Console.Write("Ingresa un número entero: ");
+            int numero = int.Parse(Console.ReadLine());
+
+            if (EsPrimo(numero))
+            {
+                Console.WriteLine($"{numero} es un número primo.");
+            }
+            else
+            {
+                Console.WriteLine($"{numero} no es un número primo.");
+            }
+
+            // Esperar a que se presione una tecla antes de cerrar la consola
+            Console.WriteLine("Presiona cualquier tecla para salir...");
+            Console.ReadKey();
+
+
+
+        }
+        static bool EsPrimo(int numero)
+        {
+            // Los números menores o iguales a 1 no son primos
+            if (numero <= 1)
+            {
+                return false;
+            }
+
+            // Comprobar divisibilidad desde 2 hasta la raíz cuadrada del número
+            for (int i = 2; i <= Math.Sqrt(numero); i++)
+            {
+                if (numero % i == 0)
+                {
+                    return false; // El número es divisible, no es primo
+                }
+            }
+            return true; // El número no es divisible, es primo
+        }
+
+    }
+}

@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Algoritmos
+{
+    class EstructuradaC12
+    {
+        public void NumOrdenador()
+        {
+            Console.Write("Ingrese el primero numero");
+            int num1 = int.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese el segundo numero");
+            int num2 = int.Parse(Console.ReadLine());
+
+            if (num1 > num2)
+            {
+                Console.WriteLine($"Ordenados de mayo a menor: {num1}, {num2}");
+
+            }
+            else
+            {
+                Console.WriteLine($"Ordenados de mayo a menor: {num2}, {num1}");
+
+            }
+            Console.WriteLine("Presione cualquier tecla para salir....");
+            Console.ReadKey();
+        }
+    }
+}

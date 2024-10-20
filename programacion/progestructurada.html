@@ -9,7 +9,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="../assets/img/logo.png" rel="icon"> 
+  <link href="../assets/img/logo.png" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Iconos -->
@@ -32,7 +32,7 @@
       background-color: #fff;
       border: 1px solid #ddd;
       border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       width: 100%;
       max-width: 400px;
       height: 250px;
@@ -65,9 +65,12 @@
     }
 
     .card-body pre {
-      white-space: pre; /* Mantiene el formato del código */
-      overflow-x: auto; /* Añade barra de desplazamiento horizontal */
-      overflow-y: auto; /* Añade barra de desplazamiento vertical si es necesario */
+      white-space: pre;
+      /* Mantiene el formato del código */
+      overflow-x: auto;
+      /* Añade barra de desplazamiento horizontal */
+      overflow-y: auto;
+      /* Añade barra de desplazamiento vertical si es necesario */
       margin: 0;
       padding: 10px;
       background-color: #f8f9fa;
@@ -159,135 +162,423 @@
       </nav><!-- .navbar -->
     </div>
   </header><!-- End Header -->
-  
+
   <main id="main">
-      <!-- ======= Seccion Mis Rutinas ======= -->
-      <section id="misrutinas" class="services-mf pt-5 route" style="margin-top: 75px;">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="title-box text-center">
-                <h3 class="title">
-                  Prog. Estructurada
-                </h3>
-                <p class="subtitle-a">
-                  Cada Ejercicio presenta la solución del mismo mediante código en Java 
-                  <i class="bi bi-cup-hot"></i> 
+    <!-- ======= Seccion Mis Rutinas ======= -->
+    <section id="misrutinas" class="services-mf pt-5 route" style="margin-top: 75px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title">
+                Prog. Estructurada
+              </h3>
+              <p class="subtitle-a">
+                Cada Ejercicio presenta la solución del mismo mediante código en Java
+                <i class="bi bi-cup-hot"></i>
+                y C#
+              </p>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Ejercicio 1 -->
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="card-title mb-0">Ejercicio 1:</h6>
+                <label class="form-check-label text-muted">
+                  <i class="fas fa-toggle-off" id="switch-icon-1" onclick="toggleCodeOptions(1)"></i>
+                  <span>Código</span>
+                </label>
+              </div>
+              <div class="card-body">
+                <p class="text-muted" style="text-align: justify">
+                  Crear una calculadora básica para realizar operaciones aritméticas como: suma, resta, multiplicación y división.
                 </p>
-                <div class="line-mf"></div>
+                <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">19 Sept. 2024</span></b>
+                <div class="code-view" id="code-view-1">
+                  <button onclick="loadCode(1, 'java')" class="btn btn-secondary">Java</button>
+                  <button onclick="loadCode(1, 'csharp')" class="btn btn-secondary">C#</button>
+                  <!-- Actualizamos el botón para llamar a la función copyCode -->
+                  <button class="btn btn-primary" onclick="copyCode(1)">
+                    <i class="fas fa-copy"></i> Copiar código
+                  </button>
+                  <pre id="code-block-1">
+                    <!-- Aquí se cargará el código desde el archivo .txt -->
+                  </pre>
+                </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <!-- Ejercicio 1 -->
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-header">
-                  <h6 class="card-title mb-0">Ejercicio 1:</h6>
-                  <label class="form-check-label text-muted">
-                    <i class="fas fa-toggle-off" id="switch-icon-1"></i>
-                    <span>Código</span>
-                  </label>
-                </div>
-                <div class="card-body">
-                  <p class="text-muted" style="text-align: justify">Crear una calculadora básica para realizar operaciones aritméticas como: suma, resta, multiplicación y división.</p>
-                  <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">19 Sept. 2024</span></b>
-                  <div class="code-view" id="code-view-1">
-                    
-                    <button class="btn-copy" data-clipboard-target="#code-block-1">
-                      <i class="fas fa-copy"></i> Copiar código
-                    </button>
-                    <pre id="code-block-1">
-                      <!-- codigo desde archivo .txt -->
-                    </pre>
-                  </div>
+          <!-- Ejercicio 2 -->
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="card-title mb-0">Ejercicio 2:</h6>
+                <label class="form-check-label text-muted">
+                  <i class="fas fa-toggle-off" id="switch-icon-2" onclick="toggleCodeOptions(2)"></i>
+                  <span>Código</span>
+                </label>
+              </div>
+              <div class="card-body">
+                <p class="text-muted" style="text-align: justify">
+                  Imprimir la siguiente figura <br>
+                  *<br>
+                  * * <br>
+                  * * * <br>
+                  * * * * <br>
+                  * * * * * <br>
+                </p>
+                <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">20 Sept. 2024</span></b>
+                <div class="code-view" id="code-view-2">
+                  <button onclick="loadCode(2, 'java')" class="btn btn-secondary">Java</button>
+                  <button onclick="loadCode(2, 'csharp')" class="btn btn-secondary">C#</button>
+                  <!-- Actualizamos el botón para llamar a la función copyCode -->
+                  <button class="btn btn-primary" onclick="copyCode(2)">
+                    <i class="fas fa-copy"></i> Copiar código
+                  </button>
+                  <pre id="code-block-2">
+                    <!-- Aquí se cargará el código desde el archivo .txt -->
+                  </pre>
                 </div>
               </div>
             </div>
-            <!-- Ejercicio 2 -->
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-header">
-                  <h6 class="card-title mb-0">Ejercicio 2:</h6>
-                  <label class="form-check-label text-muted">
-                    <i class="fas fa-toggle-off" id="switch-icon-2"></i>
-                    <span>Código</span>
-                  </label>
-                </div>
-                <div class="card-body">
-                  <p class="text-muted" style="text-align: justify">
-                    Imprimir la siguiente figura <br>
-                    *<br>
-                    * * <br>
-                    * * * <br>
-                    * * * * <br>
-                    * * * * * <br>  
-                  </p>
-                  <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">20 Sept. 2024</span></b>
-                  <div class="code-view" id="code-view-2">
-                  
-                    <button class="btn-copy" data-clipboard-target="#code-block-2">
-                      <i class="fas fa-copy"></i> Copiar código
-                    </button>
-                    <pre id="code-block-2">
+          </div>
+          <!-- Ejercicio 3 -->
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="card-title mb-0">Ejercicio 3:</h6>
+                <label class="form-check-label text-muted">
+                  <i class="fas fa-toggle-off" id="switch-icon-3" onclick="toggleCodeOptions(3)"></i>
+                  <span>Código</span>
+                </label>
+                </label>
+              </div>
+              <div class="card-body">
+                <p class="text-muted" style="text-align: justify">Desarrollar un programa que pida al usuario un número entero y determine si ese número es primo o no.</p>
+                <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">21 Sept. 2024</span></b>
+                <div class="code-view" id="code-view-3">
+                  <button onclick="loadCode(3, 'java')" class="btn btn-secondary">Java</button>
+                  <button onclick="loadCode(3, 'csharp')" class="btn btn-secondary">C#</button>
+                  <!-- Actualizamos el botón para llamar a la función copyCode -->
+                  <button class="btn btn-primary" onclick="copyCode(3)">
+                    <i class="fas fa-copy"></i> Copiar código
+                  </button>
+                  <pre id="code-block-3">
                       <!-- codigo desde archivo .txt -->
                     </pre>
-                  </div>
                 </div>
               </div>
             </div>
-            <!-- Ejercicio 3 -->
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-header">
-                  <h6 class="card-title mb-0">Ejercicio 3:</h6>
-                  <label class="form-check-label text-muted">
-                    <i class="fas fa-toggle-off" id="switch-icon-3"></i>
-                    <span>Código</span>
-                  </label>
-                </div>
-                <div class="card-body">
-                  <p class="text-muted" style="text-align: justify">Desarollar un programa en Java que pida al usuario un número entero y determine si ese número es primo o no.</p>
-                  <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">21 Sept. 2024</span></b>
-                  <div class="code-view" id="code-view-3">
-                   
-                    <button class="btn-copy" data-clipboard-target="#code-block-3">
-                      <i class="fas fa-copy"></i> Copiar código
-                    </button>
-                    <pre id="code-block-3">
+          </div>
+          <!-- Ejercicio 4 -->
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="card-title mb-0">Ejercicio 4:</h6>
+                <label class="form-check-label text-muted">
+                  <i class="fas fa-toggle-off" id="switch-icon-4" onclick="toggleCodeOptions(4)"></i>
+                  <span>Código</span>
+                </label>
+                </label>
+              </div>
+              <div class="card-body">
+                <p class="text-muted" style="text-align: justify">Pedir los coeficientes de una ecuación de 2º grado, y muestre sus soluciones reales. Si no existen,
+                  debe indicarlo.
+                </p>
+                <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">22 Sept. 2024</span></b>
+                <div class="code-view" id="code-view-4">
+                  <button onclick="loadCode(4, 'java')" class="btn btn-secondary">Java</button>
+                  <button onclick="loadCode(4, 'csharp')" class="btn btn-secondary">C#</button>
+                  <!-- Actualizamos el botón para llamar a la función copyCode -->
+                  <button class="btn btn-primary" onclick="copyCode(4)">
+                    <i class="fas fa-copy"></i> Copiar código
+                  </button>
+                  <pre id="code-block-4">
                       <!-- codigo desde archivo .txt -->
                     </pre>
-                  </div>
                 </div>
               </div>
             </div>
-             <!-- Ejercicio 4 -->
-             <div class="col-md-4">
-              <div class="card">
-                <div class="card-header">
-                  <h6 class="card-title mb-0">Ejercicio 4:</h6>
-                  <label class="form-check-label text-muted">
-                    <i class="fas fa-toggle-off" id="switch-icon"></i>
-                    <span>Código</span>
-                  </label>
-                </div>
-                <div class="card-body">
-                  <p class="text-muted" style="text-align: justify">Pendiente</p>
-                  <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">22 Sept. 2024</span></b>
-                  <div class="code-view">
-                    <button class="btn-copy" data-clipboard-target="#code-block-3">
-                      <i class="fas fa-copy"></i> Copiar código
-                    </button>
-                    <pre id="code-block-3">
+          </div>
+          <!-- Ejercicio 5 -->
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="card-title mb-0">Ejercicio 5:</h6>
+                <label class="form-check-label text-muted">
+                  <i class="fas fa-toggle-off" id="switch-icon-5" onclick="toggleCodeOptions(5)"></i>
+                  <span>Código</span>
+                </label>
+                </label>
+              </div>
+              <div class="card-body">
+                <p class="text-muted" style="text-align: justify">
+                  Pedir el radio de un círculo y calcular su área. A=PI*r^2.
+
+                </p>
+                <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">23 Sept. 2024</span></b>
+                <div class="code-view" id="code-view-5">
+                  <button onclick="loadCode(5, 'java')" class="btn btn-secondary">Java</button>
+                  <button onclick="loadCode(5, 'csharp')" class="btn btn-secondary">C#</button>
+                  <!-- Actualizamos el botón para llamar a la función copyCode -->
+                  <button class="btn btn-primary" onclick="copyCode(5)">
+                    <i class="fas fa-copy"></i> Copiar código
+                  </button>
+                  <pre id="code-block-5">
                       <!-- codigo desde archivo .txt -->
                     </pre>
-                  </div>
                 </div>
               </div>
             </div>
-          </div><!-- Fin row -->
-        </div><!-- Fin container -->
-      </section><!-- Fin Mis Rutinas -->
+          </div>
+          <!-- Ejercicio 6 -->
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="card-title mb-0">Ejercicio 6:</h6>
+                <label class="form-check-label text-muted">
+                  <i class="fas fa-toggle-off" id="switch-icon-6" onclick="toggleCodeOptions(6)"></i>
+                  <span>Código</span>
+                </label>
+                </label>
+              </div>
+              <div class="card-body">
+                <p class="text-muted" style="text-align: justify">
+                  Pedir el radio de una circunferencia y calcular su longitud.
+                </p>
+                <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">24 Sept. 2024</span></b>
+                <div class="code-view" id="code-view-6">
+                  <button onclick="loadCode(6, 'java')" class="btn btn-secondary">Java</button>
+                  <button onclick="loadCode(6, 'csharp')" class="btn btn-secondary">C#</button>
+                  <!-- Actualizamos el botón para llamar a la función copyCode -->
+                  <button class="btn btn-primary" onclick="copyCode(6)">
+                    <i class="fas fa-copy"></i> Copiar código
+                  </button>
+                  <pre id="code-block-6">
+                      <!-- codigo desde archivo .txt -->
+                    </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Ejercicio 7 -->
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="card-title mb-0">Ejercicio 7:</h6>
+                <label class="form-check-label text-muted">
+                  <i class="fas fa-toggle-off" id="switch-icon-7" onclick="toggleCodeOptions(7)"></i>
+                  <span>Código</span>
+                </label>
+                </label>
+              </div>
+              <div class="card-body">
+                <p class="text-muted" style="text-align: justify">
+                  Pedir dos números y decir si son iguales o no.
+                </p>
+                <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">25 Sept. 2024</span></b>
+                <div class="code-view" id="code-view-7">
+                  <button onclick="loadCode(7, 'java')" class="btn btn-secondary">Java</button>
+                  <button onclick="loadCode(7, 'csharp')" class="btn btn-secondary">C#</button>
+                  <!-- Actualizamos el botón para llamar a la función copyCode -->
+                  <button class="btn btn-primary" onclick="copyCode(7)">
+                    <i class="fas fa-copy"></i> Copiar código
+                  </button>
+                  <pre id="code-block-7">
+                      <!-- codigo desde archivo .txt -->
+                    </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Ejercicio 8 -->
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="card-title mb-0">Ejercicio 8:</h6>
+                <label class="form-check-label text-muted">
+                  <i class="fas fa-toggle-off" id="switch-icon-8" onclick="toggleCodeOptions(8)"></i>
+                  <span>Código</span>
+                </label>
+                </label>
+              </div>
+              <div class="card-body">
+                <p class="text-muted" style="text-align: justify">
+                  Pedir un número e indicar si es positivo o negativo.
+                </p>
+                <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">26 Sept. 2024</span></b>
+                <div class="code-view" id="code-view-8">
+                  <button onclick="loadCode(8, 'java')" class="btn btn-secondary">Java</button>
+                  <button onclick="loadCode(8, 'csharp')" class="btn btn-secondary">C#</button>
+                  <!-- Actualizamos el botón para llamar a la función copyCode -->
+                  <button class="btn btn-primary" onclick="copyCode(8)">
+                    <i class="fas fa-copy"></i> Copiar código
+                  </button>
+                  <pre id="code-block-8">
+                      <!-- codigo desde archivo .txt -->
+                    </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Ejercicio 9 -->
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="card-title mb-0">Ejercicio 9:</h6>
+                <label class="form-check-label text-muted">
+                  <i class="fas fa-toggle-off" id="switch-icon-9" onclick="toggleCodeOptions(9)"></i>
+                  <span>Código</span>
+                </label>
+                </label>
+              </div>
+              <div class="card-body">
+                <p class="text-muted" style="text-align: justify">
+                  Pedir dos números y decir si uno es múltiplo del otro.
+                </p>
+                <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">27 Sept. 2024</span></b>
+                <div class="code-view" id="code-view-9">
+                  <button onclick="loadCode(9, 'java')" class="btn btn-secondary">Java</button>
+                  <button onclick="loadCode(9, 'csharp')" class="btn btn-secondary">C#</button>
+                  <!-- Actualizamos el botón para llamar a la función copyCode -->
+                  <button class="btn btn-primary" onclick="copyCode(9)">
+                    <i class="fas fa-copy"></i> Copiar código
+                  </button>
+                  <pre id="code-block-9">
+                      <!-- codigo desde archivo .txt -->
+                    </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Ejercicio 10 -->
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="card-title mb-0">Ejercicio 10:</h6>
+                <label class="form-check-label text-muted">
+                  <i class="fas fa-toggle-off" id="switch-icon-10" onclick="toggleCodeOptions(10)"></i>
+                  <span>Código</span>
+                </label>
+                </label>
+              </div>
+              <div class="card-body">
+                <p class="text-muted" style="text-align: justify">
+                  Pedir dos números y decir cual es el mayor.
+                </p>
+                <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">28 Sept. 2024</span></b>
+                <div class="code-view" id="code-view-10">
+                  <button onclick="loadCode(10, 'java')" class="btn btn-secondary">Java</button>
+                  <button onclick="loadCode(10, 'csharp')" class="btn btn-secondary">C#</button>
+                  <!-- Actualizamos el botón para llamar a la función copyCode -->
+                  <button class="btn btn-primary" onclick="copyCode(10)">
+                    <i class="fas fa-copy"></i> Copiar código
+                  </button>
+                  <pre id="code-block-10">
+                      <!-- codigo desde archivo .txt -->
+                    </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Ejercicio 11 -->
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="card-title mb-0">Ejercicio 11:</h6>
+                <label class="form-check-label text-muted">
+                  <i class="fas fa-toggle-off" id="switch-icon-11" onclick="toggleCodeOptions(11)"></i>
+                  <span>Código</span>
+                </label>
+                </label>
+              </div>
+              <div class="card-body">
+                <p class="text-muted" style="text-align: justify">
+                  Pedir dos números y decir cual es el mayor o si son iguales.
+                </p>
+                <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">29 Sept. 2024</span></b>
+                <div class="code-view" id="code-view-11">
+                  <button onclick="loadCode(11, 'java')" class="btn btn-secondary">Java</button>
+                  <button onclick="loadCode(11, 'csharp')" class="btn btn-secondary">C#</button>
+                  <!-- Actualizamos el botón para llamar a la función copyCode -->
+                  <button class="btn btn-primary" onclick="copyCode(11)">
+                    <i class="fas fa-copy"></i> Copiar código
+                  </button>
+                  <pre id="code-block-11">
+                      <!-- codigo desde archivo .txt -->
+                    </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Ejercicio 12 -->
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="card-title mb-0">Ejercicio 12:</h6>
+                <label class="form-check-label text-muted">
+                  <i class="fas fa-toggle-off" id="switch-icon-12" onclick="toggleCodeOptions(12)"></i>
+                  <span>Código</span>
+                </label>
+                </label>
+              </div>
+              <div class="card-body">
+                <p class="text-muted" style="text-align: justify">
+                  Pedir dos números y mostrarlos ordenados de mayor a menor.
+                </p>
+                <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">30 Sept. 2024</span></b>
+                <div class="code-view" id="code-view-12">
+                  <button onclick="loadCode(12, 'java')" class="btn btn-secondary">Java</button>
+                  <button onclick="loadCode(12, 'csharp')" class="btn btn-secondary">C#</button>
+                  <!-- Actualizamos el botón para llamar a la función copyCode -->
+                  <button class="btn btn-primary" onclick="copyCode(12)">
+                    <i class="fas fa-copy"></i> Copiar código
+                  </button>
+                  <pre id="code-block-12">
+                      <!-- codigo desde archivo .txt -->
+                    </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Ejercicio 13 -->
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                <h6 class="card-title mb-0">Ejercicio 13:</h6>
+                <label class="form-check-label text-muted">
+                  <i class="fas fa-toggle-off" id="switch-icon-13" onclick="toggleCodeOptions(13)"></i>
+                  <span>Código</span>
+                </label>
+                </label>
+              </div>
+              <div class="card-body">
+                <p class="text-muted" style="text-align: justify">
+                  Pedir tres números y mostrarlos ordenados de mayor a menor.
+                </p>
+                <b><span class="w-ctegory" style="color: #007bff;">Desarrollado el</span> / <span class="w-date">01 Oct. 2024</span></b>
+                <div class="code-view" id="code-view-13">
+                  <button onclick="loadCode(13, 'java')" class="btn btn-secondary">Java</button>
+                  <button onclick="loadCode(13, 'csharp')" class="btn btn-secondary">C#</button>
+                  <!-- Actualizamos el botón para llamar a la función copyCode -->
+                  <button class="btn btn-primary" onclick="copyCode(13)">
+                    <i class="fas fa-copy"></i> Copiar código
+                  </button>
+                  <pre id="code-block-13">
+                      <!-- codigo desde archivo .txt -->
+                    </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- Fin row -->
+      </div><!-- Fin container -->
+    </section><!-- Fin Mis Rutinas -->
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -321,69 +612,45 @@
   <script src="../assets/js/main.js"></script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var cards = document.querySelectorAll('.card');
+    // Alterna la visibilidad de los botones Java y C#
+    function toggleCodeOptions(id) {
+      const codeView = document.getElementById(`code-view-${id}`);
+      const switchIcon = document.getElementById(`switch-icon-${id}`);
+      codeView.style.display = codeView.style.display === 'block' ? 'none' : 'block';
+      switchIcon.classList.toggle('fa-toggle-off');
+      switchIcon.classList.toggle('fa-toggle-on');
+    }
 
-      cards.forEach(function(card) {
-        var codeView = card.querySelector('.code-view');
-        var switchIcon = card.querySelector('.form-check-label i');
-        var button = card.querySelector('.btn-copy');
-        var codeBlockId = button.getAttribute('data-clipboard-target');
-        var iframe = codeView.querySelector('iframe');
+    // Cargar el código en el contenedor adecuado según el archivo .txt seleccionado
+    function loadCode(id, language) {
+      const codeBlock = document.getElementById(`code-block-${id}`);
+      const filePath = language === 'java' ?
+        `../assets/docs/progEstructurada/estructurada${id}.txt` :
+        `../assets/docs/progEstructurada/estructuradaC${id}.txt`;
 
-        // Determina el archivo correcto para cada botón de copia
-        var file = codeBlockId === '#code-block-1' ? '../assets/docs/progEstructurada/estructurada1.txt' :
-                    codeBlockId === '#code-block-2' ? '../assets/docs/progEstructurada/estructurada2.txt' :
-                    codeBlockId === '#code-block-3' ? '../assets/docs/progEstructurada/estructurada3.txt' :
-                    null;
-
-        if (file) {
-          fetch(file)
-            .then(response => {
-              if (!response.ok) {
-                throw new Error('Red error');
-              }
-              return response.text();
-            })
-            .then(data => {
-              console.log(`Cargando contenido de ${file}`); // Añadido para depuración
-              document.querySelector(codeBlockId).textContent = data;
-            })
-            .catch(error => console.error('Error cargando el archivo:', error));
-        }
-
-        card.querySelector('.form-check-label').addEventListener('click', function() {
-          if (codeView.style.display === 'block') {
-            codeView.style.display = 'none';
-            switchIcon.classList.remove('fa-toggle-on');
-            switchIcon.classList.add('fa-toggle-off');
-            iframe.style.display = 'none'; // Ocultar iframe al cerrar
-          } else {
-            codeView.style.display = 'block';
-            switchIcon.classList.remove('fa-toggle-off');
-            switchIcon.classList.add('fa-toggle-on');
-            iframe.style.display = 'block'; // Mostrar iframe al abrir
-          }
+      fetch(filePath)
+        .then(response => response.text())
+        .then(data => {
+          codeBlock.textContent = data;
+        })
+        .catch(error => {
+          codeBlock.textContent = "No se pudo cargar el código.";
+          console.error('Error al cargar el archivo:', error);
         });
+    }
 
-        button.addEventListener('click', function() {
-          const targetId = button.getAttribute('data-clipboard-target');
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            navigator.clipboard.writeText(targetElement.textContent)
-              .then(() => {
-                button.textContent = 'Código copiado!';
-                setTimeout(() => {
-                  button.textContent = 'Copiar código';
-                }, 2000);
-              })
-              .catch(err => {
-                console.error('Error al copiar el código: ', err);
-              });
-          }
-        });
+    // Función para copiar el texto desde el <pre> especificado
+    function copyCode(id) {
+      const codeBlock = document.getElementById(`code-block-${id}`);
+      const codeText = codeBlock.innerText;
+
+      // Copiamos el texto usando el portapapeles de navegador
+      navigator.clipboard.writeText(codeText).then(() => {
+        alert("Código copiado al portapapeles!");
+      }).catch(err => {
+        console.error("Error al copiar el texto: ", err);
       });
-    });
+    }
   </script>
 
 </body>
