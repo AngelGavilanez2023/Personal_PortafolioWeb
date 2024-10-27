@@ -122,12 +122,15 @@
                 <div class="card-header">Episode 01</div>
                 <img src="../assets/docs/films/S01-E01.png" class="card-img p-3" aria-colspan="Episode 01">
                 <div class="card-body">
-                  <p id="plot-text-1" class="card-text ">
+                  <p class="card-text ">
                     Mary Alice takes her own life, taking us into the lives of her family, friends, and neighbors.
                   </p>
-                  <button class="btn btn-primary btn-play" onclick="togglePlay('plot-text-1')">
-                    <i id="play-icon-1" class="bi bi-play-circle"></i> Play
+                  <button class="btn btn-primary btn-play" data-plot="Mary Alice takes her own life, taking us into the lives of her family, friends, and neighbors." 
+                          onclick="togglePlay(this)">
+                    <i class="bi bi-play-circle"></i> Play
                   </button>
+
+                  
                   <div class="table-scroll"> <!-- Contenedor para el scroll -->
                     <table class="table table-striped">
                       <thead>
@@ -221,56 +224,75 @@
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
 
-  <script>
-    let utterance;
-    let isPlaying = false;
-  
-    function togglePlay(button) {
-      const plotText = button.getAttribute('data-plot');
-  
-      if (isPlaying) {
-        speechSynthesis.pause();
-        button.querySelector('#play-icon').classList.remove('bi-pause-circle');
-        button.querySelector('#play-icon').classList.add('bi-play-circle');
-      } else {
-        if (speechSynthesis.speaking) {
-          speechSynthesis.cancel();
-        }
-        utterance = new SpeechSynthesisUtterance(plotText);
-        utterance.lang = 'en-US';
-  
-        // Ajustar la voz y velocidad
-        const voices = speechSynthesis.getVoices();
-        utterance.voice = voices.find(voice => voice.name === 'Google US English'); // Cambia el nombre por la voz que prefieras
-        utterance.rate = 1; // Ajusta la velocidad (1 es el valor normal)
-  
-        speechSynthesis.speak(utterance);
-        button.querySelector('#play-icon').classList.remove('bi-play-circle');
-        button.querySelector('#play-icon').classList.add('bi-pause-circle');
-      }
-      isPlaying = !isPlaying;
-  
-      // Manejo de eventos para pausar o reanudar
-      utterance.onend = () => {
-        isPlaying = false;
-        button.querySelector('#play-icon').classList.remove('bi-pause-circle');
-        button.querySelector('#play-icon').classList.add('bi-play-circle');
-      };
-  
-      // Actualiza el estado de pausa
-      utterance.onpause = () => {
-        isPlaying = false;
-        button.querySelector('#play-icon').classList.remove('bi-pause-circle');
-        button.querySelector('#play-icon').classList.add('bi-play-circle');
-      };
-  
-      utterance.onresume = () => {
-        isPlaying = true;
-        button.querySelector('#play-icon').classList.remove('bi-play-circle');
-        button.querySelector('#play-icon').classList.add('bi-pause-circle');
-      };
+<script>
+  let utterance;
+let isPlaying = false;
+let voices = [];
+
+// Asegúrate de que las voces se cargan correctamente
+window.speechSynthesis.onvoiceschanged = () => {
+  voices = speechSynthesis.getVoices();
+  console.log(voices); // Ver las voces disponibles en la consola.
+};
+
+function getNaturalVoice() {
+  // Intentar buscar voces específicas para un inglés más natural
+  const preferredVoices = voices.filter(voice =>
+    voice.name.includes('Google US English') || 
+    voice.name.includes('Microsoft') || 
+    voice.lang.startsWith('en')
+  );
+
+  // Si se encuentran, usar la primera voz preferida; si no, usar la primera disponible.
+  return preferredVoices.length ? preferredVoices[0] : voices[0];
+}
+
+function togglePlay(button) {
+  const plotText = button.getAttribute('data-plot');
+  const icon = button.querySelector('i');
+
+  if (isPlaying) {
+    speechSynthesis.pause();
+    icon.classList.remove('bi-pause-circle');
+    icon.classList.add('bi-play-circle');
+  } else {
+    if (speechSynthesis.speaking) {
+      speechSynthesis.cancel();
     }
-  </script>
-  
+
+    utterance = new SpeechSynthesisUtterance(plotText);
+    utterance.voice = getNaturalVoice(); // Asignar la voz más natural disponible
+    utterance.lang = 'en-US'; // Asegurar que se usa inglés estadounidense
+    utterance.rate = 0.85; // Reducir velocidad para mayor claridad
+    utterance.pitch = 1.0; // Tono normal para evitar distorsión
+
+    speechSynthesis.speak(utterance);
+    icon.classList.remove('bi-play-circle');
+    icon.classList.add('bi-pause-circle');
+  }
+
+  isPlaying = !isPlaying;
+
+  // Eventos para manejar el estado de reproducción
+  utterance.onend = () => {
+    isPlaying = false;
+    icon.classList.remove('bi-pause-circle');
+    icon.classList.add('bi-play-circle');
+  };
+
+  utterance.onpause = () => {
+    isPlaying = false;
+    icon.classList.remove('bi-pause-circle');
+    icon.classList.add('bi-play-circle');
+  };
+
+  utterance.onresume = () => {
+    isPlaying = true;
+    icon.classList.remove('bi-play-circle');
+    icon.classList.add('bi-pause-circle');
+  };
+}
+
+</script>
 </body>
 </html>
